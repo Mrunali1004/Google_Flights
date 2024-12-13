@@ -12,17 +12,19 @@ import logo from "../../assets/logo/googlelogo_clr_74x24px.jpg";
 import LuggageIcon from "@mui/icons-material/Luggage";
 import FlightIcon from "@mui/icons-material/Flight";
 import HotelIcon from "@mui/icons-material/Hotel";
-import CarRentalIcon from "@mui/icons-material/CarRental";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className="bg-white fixed top-0 w-full z-50">
+    <Disclosure
+      as="nav"
+      className="bg-gradient-to-r from-indigo-600 to-blue-500 fixed top-0 w-full z-50 shadow-lg"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon
@@ -37,44 +39,37 @@ const Navbar = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img alt="logo" src={logo} height="24px" width="74px" />
+              <Link to="/">
+                <img alt="logo" src={logo} height="24px" width="74px" />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+              <div className="flex space-x-6">
                 <div>
                   <Link
                     to="/travel"
-                    className="font-display3 border border-slate-300 rounded-full px-3 py-2 text-sm font-medium normal-case tracking-wide flex items-center space-x-2  hover:bg-sky-700 hover:bg-slate-100  hover:text-darkblue"
+                    className="text-white bg-teal-900 hover:bg-teal-300 hover:text-white transition-all duration-300 py-2 px-4 rounded-full text-sm font-medium flex items-center space-x-2 "
                   >
-                    <LuggageIcon color="primary" sx={{ fontSize: "1rem" }} />
+                    <LuggageIcon sx={{ fontSize: "1.2rem" }} />
                     <span>Travel</span>
                   </Link>
                 </div>
                 <div>
                   <Link
                     to="/flights"
-                    className="font-display3 border border-slate-300 rounded-full px-3 py-2 text-sm font-medium normal-case tracking-wide flex items-center space-x-2  hover:bg-slate-100 hover:text-darkblue"
+                    className="text-white bg-teal-900 hover:bg-teal-300 hover:text-white transition-all duration-300 py-2 px-4 rounded-full text-sm font-medium flex items-center space-x-2 "
                   >
-                    <FlightIcon color="primary" sx={{ fontSize: "1rem" }} />
+                    <FlightIcon sx={{ fontSize: "1.2rem" }} />
                     <span>Flights</span>
                   </Link>
                 </div>
                 <div>
                   <Link
                     to="/hotel"
-                    className="font-display3 border border-slate-300 rounded-full px-3 py-2 text-sm font-medium normal-case tracking-wide flex items-center space-x-2  hover:bg-sky-700 hover:bg-slate-100  hover:text-darkblue"
+                    className="text-white bg-teal-900 hover:bg-teal-300 hover:text-white transition-all duration-300 py-2 px-4 rounded-full text-sm font-medium flex items-center space-x-2 "
                   >
-                    <HotelIcon color="primary" sx={{ fontSize: "1rem" }} />
+                    <HotelIcon sx={{ fontSize: "1.2rem" }} />
                     <span>Hotels</span>
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to="/carhire"
-                    className="font-display3 border border-slate-300 rounded-full px-3 py-2 text-sm font-medium normal-case tracking-wide flex items-center space-x-2  hover:bg-sky-700 hover:bg-slate-100  hover:text-darkblue"
-                  >
-                    <CarRentalIcon color="primary" sx={{ fontSize: "1rem" }} />
-                    <span>Car Hire</span>
                   </Link>
                 </div>
               </div>
@@ -90,7 +85,7 @@ const Navbar = () => {
                   <img
                     alt=""
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    className="size-8 rounded-full"
+                    className="rounded-full h-8 w-8"
                   />
                 </MenuButton>
               </div>
@@ -101,7 +96,7 @@ const Navbar = () => {
                 <MenuItem>
                   <a
                     href="#m"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Your Profile
                   </a>
@@ -109,7 +104,7 @@ const Navbar = () => {
                 <MenuItem>
                   <a
                     href="#b"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Settings
                   </a>
@@ -117,7 +112,7 @@ const Navbar = () => {
                 <MenuItem>
                   <a
                     href="#c"
-                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:outline-none"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     Sign out
                   </a>

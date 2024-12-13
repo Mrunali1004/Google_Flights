@@ -4,6 +4,7 @@ import HomePage from "./components/Homepage/Homepage";
 import Hotel from "./components/Hotel/Hotel";
 import Flight from "./components/Flight/Flight";
 import Navbar from "./components/Nabvar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/travel" element={<Travel />} />
         <Route path="/flights" element={<Flight />} />
       </Routes>
+      <Footer />
     </>
   );
 }
