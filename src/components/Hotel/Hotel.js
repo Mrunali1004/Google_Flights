@@ -58,8 +58,6 @@ const Hotel = () => {
             onChange={(e) => setQuery(e.target.value)}
             className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-800"
           />
-          <span className="absolute right-4 top-2 text-gray-500">📍</span>
-
           <button
             type="submit"
             disabled={loading}
